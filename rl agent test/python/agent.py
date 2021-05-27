@@ -1,4 +1,3 @@
-from os import device_encoding
 import torch
 import torch.nn as nn
 import torch.functional as F
@@ -8,12 +7,12 @@ import random
 
 import model
 import buffer
-
+import hyperparams
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 class Agent:
-    def __init__(self, sync_frame, buffer_length, action_size, observation_size, discount_factor=0.99, learning_rate=1e-3, batch_size=64, optim="Adam", update_rate=4):
+    def __init__(self, sync_frame, buffer_length, action_size, observation_size, discount_factor=0.99, learning_rate=1e-3, batch_size=64, update_rate=4):
         self.t_frame=0
         self.t_step=0
         self.sync_frame = sync_frame
