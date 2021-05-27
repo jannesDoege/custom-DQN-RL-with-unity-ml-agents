@@ -2,11 +2,13 @@ from os import device_encoding
 import torch
 import torch.nn as nn
 import torch.functional as F
-import model
-import buffer
 import copy
 import numpy as np
 import random
+
+import model
+import buffer
+
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
