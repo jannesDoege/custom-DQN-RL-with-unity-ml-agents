@@ -9,5 +9,5 @@ hyperparams = {
     "update_rate": 4,
     "hidden_units_one": 128,
     "hidden_units_two": 128,
-       
+    "behavior_name": "MoveToGoal"
 }
