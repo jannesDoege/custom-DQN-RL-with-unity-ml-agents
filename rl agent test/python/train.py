@@ -1,4 +1,3 @@
-import mlagents_envs
 import torch
 import numpy as np
 import mlagents
@@ -8,9 +7,12 @@ import time
 
 import agent
 from hyperparams import hyperparams
+from buffer import Experience
 
 #if this is set to None you have to click the play button in the unity scene after creating the env
 env_file_name = None
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
 
 def main():
     if env_file_name == None:
@@ -24,9 +26,9 @@ def main():
     spec = env.behavior_specs[behavior_name]
     
     decision_steps, terminl_steps = env.get_steps(behavior_name)
-    observation_size = spec.observation_specs[0].shape[0]
-    action_size = len(decision_steps[0][0][0])
-    done = False
+    observation_size = len(decision_steps[0][0][0])
+    action_size = len(decision_steps)
+    done_t = False
     rewards = []
     best_m_reward = None
     epsilon = hyperparams["epsilon_start"]
@@ -39,12 +41,23 @@ def main():
 
     while True:
         env.reset()
-        reward = 0
+        decision_steps, terminl_steps = env.get_steps(behavior_name)
+        obs = decision_steps[0][0][0]
+
+        t_reward = 0
         tracked_agent = decision_steps.agent_id[0]
 
+        state_v = torch.tensor(obs).to(device)
+        action = dqn_agent.act(obs, epsilon)   
+
+        env.set_actions(behavior_name, action)
+        env.step()
+
+
         
-        #save model
-        #tensorboard
+        #act in env
+
+        dqn_agent.step(Experience(obs, action, reward, done, next_state))
 
 def update_epsilon(eps):
     return eps

@@ -1,6 +1,7 @@
 hyperparams = {
     "epsilon_end": 0.05,
     "epsilon_decay": 0.99,
+    "epsilon_start": 1,
     "solved_score": 30,
     "discount_factor": 0.9,
     "replay_buffer_size": 1e5,
