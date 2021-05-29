@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{c7e32c4a-7228-0796-e4f1-90dba68fe21c}</ProjectGuid>
+    <ProjectGuid>{a588b586-f96a-2a79-0a8d-34ea7c959619}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -39,7 +39,6 @@
      <Compile Include="Assets\scripts\Goal.cs" />
      <Compile Include="Assets\scripts\MoveToGoalAgent.cs" />
      <Compile Include="Assets\scripts\Wall.cs" />
-     <None Include="Assets\The_Texture_Lab\TL_Prototype_Textures_Pack\Documentation.txt" />
     <Reference Include="UnityEngine">
         <HintPath>D:/unity/2019.4.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -224,22 +223,22 @@
         <HintPath>D:/unity/2019.4.16f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="Google.Protobuf">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/PackageCache/com.unity.barracuda@2.0.0-pre.3/Barracuda/Runtime/Plugins/ProtoBuffer/Google.Protobuf.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/PackageCache/com.unity.barracuda@2.0.0-pre.3/Barracuda/Runtime/Plugins/ProtoBuffer/Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Unsafe">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/PackageCache/com.unity.burst@1.3.4/Unity.Burst.Unsafe.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/PackageCache/com.unity.burst@1.3.4/Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.Abstractions">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/PackageCache/com.unity.ml-agents@2.0.0-pre.3/Plugins/System.IO.Abstractions.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/PackageCache/com.unity.ml-agents@2.0.0-pre.3/Plugins/System.IO.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.Abstractions.TestingHelpers">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/PackageCache/com.unity.ml-agents@2.0.0-pre.3/Plugins/System.IO.Abstractions.TestingHelpers.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/PackageCache/com.unity.ml-agents@2.0.0-pre.3/Plugins/System.IO.Abstractions.TestingHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Grpc.Core">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/PackageCache/com.unity.ml-agents@2.0.0-pre.3/Plugins/ProtoBuffer/Grpc.Core.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/PackageCache/com.unity.ml-agents@2.0.0-pre.3/Plugins/ProtoBuffer/Grpc.Core.dll</HintPath>
     </Reference>
     <Reference Include="System.Interactive.Async">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/PackageCache/com.unity.ml-agents@2.0.0-pre.3/Plugins/ProtoBuffer/System.Interactive.Async.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/PackageCache/com.unity.ml-agents@2.0.0-pre.3/Plugins/ProtoBuffer/System.Interactive.Async.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>D:/unity/2019.4.16f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -587,70 +586,70 @@
         <HintPath>D:/unity/2019.4.16f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Barracuda.MacBLAS">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/ScriptAssemblies/Unity.Barracuda.MacBLAS.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/ScriptAssemblies/Unity.Barracuda.MacBLAS.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Barracuda.Editor">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/ScriptAssemblies/Unity.Barracuda.Editor.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/ScriptAssemblies/Unity.Barracuda.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Editor">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Barracuda">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/ScriptAssemblies/Unity.Barracuda.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/ScriptAssemblies/Unity.Barracuda.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Barracuda.iOSBLAS">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/ScriptAssemblies/Unity.Barracuda.iOSBLAS.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/ScriptAssemblies/Unity.Barracuda.iOSBLAS.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ML-Agents.CommunicatorObjects">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/ScriptAssemblies/Unity.ML-Agents.CommunicatorObjects.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/ScriptAssemblies/Unity.ML-Agents.CommunicatorObjects.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Barracuda.BurstBLAS">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/ScriptAssemblies/Unity.Barracuda.BurstBLAS.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/ScriptAssemblies/Unity.Barracuda.BurstBLAS.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ML-Agents.Editor">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/ScriptAssemblies/Unity.ML-Agents.Editor.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/ScriptAssemblies/Unity.ML-Agents.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ML-Agents">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/ScriptAssemblies/Unity.ML-Agents.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/ScriptAssemblies/Unity.ML-Agents.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Barracuda.ONNX">
-        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/rl agent test/Library/ScriptAssemblies/Unity.Barracuda.ONNX.dll</HintPath>
+        <HintPath>D:/.programming/python/1_python/reinforcement-learning-with-unity-ml-agents/unity_project/Library/ScriptAssemblies/Unity.Barracuda.ONNX.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -129,7 +129,7 @@ MonoBehaviour:
   m_MinSize: {x: 231, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 131
+  controlID: 104
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -149,8 +149,8 @@ MonoBehaviour:
     y: 0
     width: 319
     height: 512
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -175,8 +175,8 @@ MonoBehaviour:
     y: 0
     width: 397
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 342}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 17
+  controlID: 135
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 16
+  controlID: 134
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -390,13 +390,13 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders: []
+    m_Folders:
+    - Assets/Materials
   m_ViewMode: 0
   m_StartGridSize: 16
   m_LastFolders: []
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: D:\.programming\python\1_python\reinforcement-learning-with-unity-ml-agents\rl
-    agent test
+  m_LastProjectPath: D:\.programming\python\1_python\reinforcement-learning-with-unity-ml-agents\unity_project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
@@ -431,7 +431,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff000000004e39000050390000523900005439000056390000583900005a3900005c3900005e39000060390000623900006439000066390000683900006a3900006c390000
+    m_ExpandedIDs: ffffffff000000004e39000050390000523900005439000056390000583900005c3900005e39000060390000623900006439000066390000683900006a3900006c39000088390000c8390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -554,9 +554,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 68fbffff
+      m_SelectedIDs: 583a0000
+      m_LastClickedID: 14936
+      m_ExpandedIDs: 2af0ffffa23a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -609,16 +609,16 @@ MonoBehaviour:
   m_ShowContextualTools: 0
   m_WindowGUID: efbdebecccc68fd47bbc120a197f3067
   m_Gizmos: 1
-  m_SceneIsLit: 1
+  m_SceneIsLit: 0
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 4.5, y: -0.645, z: 4.01}
+    m_Target: {x: 1.2877884, y: -2.4276748, z: -1.015707}
     speed: 2
-    m_Value: {x: 4.5, y: -0.645, z: 4.01}
+    m_Value: {x: 1.2877884, y: -2.4276748, z: -1.015707}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -631,7 +631,7 @@ MonoBehaviour:
   m_SceneViewState:
     showFog: 1
     showMaterialUpdate: 1
-    showSkybox: 1
+    showSkybox: 0
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -664,13 +664,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.25203148, y: 0.31798643, z: -0.08830572, w: -0.909801}
+    m_Target: {x: -0.14212625, y: 0.7483133, z: -0.17050166, w: -0.6252662}
     speed: 2
-    m_Value: {x: -0.25200993, y: 0.31795925, z: -0.08829817, w: -0.9097232}
+    m_Value: {x: -0.14185606, y: 0.74917495, z: -0.17069748, w: -0.62408024}
   m_Size:
-    m_Target: 2.966025
+    m_Target: 8.279845
     speed: 2
-    m_Value: 2.966025
+    m_Value: 8.669995
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -744,10 +744,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -458
-    m_HBaseRangeMax: 458
-    m_VBaseRangeMin: -257.5
-    m_VBaseRangeMax: 257.5
+    m_HBaseRangeMin: -476.5
+    m_HBaseRangeMax: 476.5
+    m_VBaseRangeMin: -268
+    m_VBaseRangeMax: 268
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -764,11 +764,11 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 21
+      y: 0
       width: 1202
-      height: 515
+      height: 536
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 601, y: 257.5}
+    m_Translation: {x: 601, y: 268}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -776,9 +776,9 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -601
-      y: -257.5
+      y: -268
       width: 1202
-      height: 515
+      height: 536
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1202, y: 536}
