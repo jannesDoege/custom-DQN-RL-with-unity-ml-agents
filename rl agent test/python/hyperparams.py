@@ -1,6 +1,6 @@
 hyperparams = {
     "epsilon_end": 0.05,
-    "epsilon_decay": 0.99,
+    "epsilon_decay_last_frame": 150000,
     "epsilon_start": 1,
     "solved_score": 30,
     "discount_factor": 0.9,
@@ -10,5 +10,6 @@ hyperparams = {
     "update_rate": 4,
     "hidden_units_one": 128,
     "hidden_units_two": 128,
+    "m_reward_length": 100,
     "behavior_name": "MoveToGoal"
 }
