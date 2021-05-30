@@ -12,7 +12,7 @@ class DQN(nn.Module):
         self.hidden_units_two = hidden_units_two
 
         self.net = nn.Sequential(
-            nn.Linear(self.input_shape, self.hidden_units_two),
+            nn.Linear(self.input_shape, self.hidden_units_one),
             nn.ReLU(),
             nn.Linear(self.hidden_units_one, self.hidden_units_two),
             nn.ReLU(),
@@ -20,6 +20,9 @@ class DQN(nn.Module):
             nn.ReLU()
         )
 
+
+
     def forward(self, x):
+
         return self.net(x)
     

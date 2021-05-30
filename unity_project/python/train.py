@@ -1,6 +1,8 @@
+from mlagents_envs.base_env import ActionTuple
 import torch
 import numpy as np
 from mlagents_envs.environment import UnityEnvironment as UE, BehaviorName, BehaviorSpec
+from mlagents_envs.side_channel.engine_configuration_channel import EngineConfigurationChannel
 from tensorboardX import SummaryWriter
 import time
 
@@ -14,31 +16,39 @@ env_file_name = None
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 def main():
-
+    channel = EngineConfigurationChannel()   
 
     if env_file_name == None:
         print("please click the play button in your unity scene")
-    env = UE(file_name=env_file_name)
+    env = UE(file_name=env_file_name, side_channels=[channel], no_graphics=True)
     if env_file_name == None:
         print("environment initialized - if you pause or close the unity scene training will stop")
+    channel.set_configuration_parameters(time_scale = 10.0)
+    
     env.reset()
+
+
 
     behavior_name = list(env.behavior_specs)[0]
     spec = env.behavior_specs[behavior_name]
     
     decision_steps, terminal_steps = env.get_steps(behavior_name)
     observation_size = len(decision_steps[0][0][0])
-    action_size = len(decision_steps)
+    action_size = len(decision_steps.action_mask)
     done_t = False
     rewards = []
     best_m_reward = None
     epsilon = hyperparams["epsilon_start"]
+    loss = None
 
-    DQN_agent = agent.Agent(hyperparams["sync_frame"], hyperparams["buffer_length"], action_size, observation_size, hyperparams["discount_factor"],
+    DQN_agent = agent.Agent(hyperparams["sync_frame"], hyperparams["replay_buffer_size"], action_size, observation_size, hyperparams["discount_factor"],
                             hyperparams["learning_rate"], hyperparams["batch_size"], hyperparams["update_rate"])
-    writer = SummaryWriter(comment="-" + behavior_name)
+    print(behavior_name[:-7])
+    writer = SummaryWriter(comment="-" + behavior_name[:-7])
     
-    start_time = time.time
+    start_time = time.time()
+
+    print(DQN_agent.net)
 
     def update_epsilon():
         return max(hyperparams["epsilon_end"], hyperparams["epsilon_start"] - DQN_agent.t_frame / hyperparams["epsilon_decay_last_frame"])
@@ -55,10 +65,15 @@ def main():
             decision_steps, terminal_steps = env.get_steps(behavior_name)   
             obs = decision_steps[0][0][0]
 
-            state_v = torch.tensor(obs).to(device)
-            action = DQN_agent.act(obs, epsilon)   
+            state_v = obs
+            action = DQN_agent.act(obs, epsilon) 
 
-            env.set_actions(behavior_name, action)
+            actions = np.zeros((1, 4), dtype=np.int32)
+            actions[0][action] = 1
+
+            action_tup = ActionTuple(discrete=actions)
+
+            env.set_actions(behavior_name, action_tup)
             env.step()
 
             decision_steps, terminal_steps = env.get_steps(behavior_name)   
@@ -71,26 +86,40 @@ def main():
                 episode_reward += reward
                 done=True
             
-            new_state = decision_steps[0][0][0]
-            DQN_agent.step(Experience(state_v, torch.tensor(action).to(device), torch.tensor(reward).to(device), torch.tensor(done).to(device), torch.tensor(new_state).to(device)))
-        
-        print(DQN_agent.t_frame + ": done ", + len(rewards) + " games, reward: " + m_reward + " eps: " + epsilon)
+            if not done:
+                new_state = decision_steps[0][0][0]
+            else:
+                new_state = terminal_steps[0][0][0]
+            loss = DQN_agent.step(Experience(state_v, action, reward, done, new_state))
 
+        m_reward = np.mean(rewards[-hyperparams["m_reward_length"]:])
+        
         epsilon = update_epsilon()
         rewards.append(episode_reward)
         
+        print(str(DQN_agent.t_frame) + " frames done " + str(len(rewards)) + " games, reward " + str(m_reward) + " eps " + str(epsilon) + " loss: " + str(loss))
+
+
+
         writer.add_scalar("epsilon", epsilon, DQN_agent.t_frame)
         writer.add_scalar("reward_100", m_reward, DQN_agent.t_frame)
         writer.add_scalar("reward", reward, DQN_agent.t_frame)
+        if loss is not None:
+            writer.add_scalar("loss", loss, DQN_agent.t_frame)
+        
+        if len(rewards)  < hyperparams["m_reward_length"]:
+            continue
 
-        m_reward = np.mean(rewards[-hyperparams["m_reward_length"]:])
-        if m_reward > hyperparams["solved_score"]:
-            print("Solved in " + DQN_agent.t_frame + " frames!")
+        if m_reward >= hyperparams["solved_score"]:
+            print("Solved in " + str(DQN_agent.t_frame) + " frames!")
             done_t = True
 
     
-    train_time = time.time - start_time
-    print("Training took " + train_time)
+    train_time = time.time() - start_time
+    torch.save(DQN_agent.target_net, "final_net.pt")
+
+    print("Training took " + str(train_time))
+    env.close()
     writer.close()
 
 

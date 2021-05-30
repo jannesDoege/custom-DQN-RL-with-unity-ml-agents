@@ -447,11 +447,11 @@ MonoBehaviour:
     VectorObservationSize: 6
     NumStackedVectorObservations: 1
     m_ActionSpec:
-      m_NumContinuousActions: 2
-      BranchSizes: 
-    VectorActionSize: 02000000
+      m_NumContinuousActions: 0
+      BranchSizes: 01000000010000000100000001000000
+    VectorActionSize: 01000000010000000100000001000000
     VectorActionDescriptions: []
-    VectorActionSpaceType: 1
+    VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
   m_Model: {fileID: 5022602860645237092, guid: bee224a98dc808c45b5de10b88474897, type: 3}
   m_InferenceDevice: 1
@@ -493,7 +493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DecisionPeriod: 5
+  DecisionPeriod: 2
   TakeActionsBetweenDecisions: 1
 --- !u!1 &1528750703660707154
 GameObject:

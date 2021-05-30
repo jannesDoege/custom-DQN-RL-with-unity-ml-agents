@@ -24,16 +24,17 @@ public class MoveToGoalAgent : Agent
         sensor.AddObservation(targetTrans.localPosition);
     }
 
-    public override void Heuristic(in ActionBuffers actionsOut){
-        ActionSegment<float> continousActions = actionsOut.ContinuousActions;
-        continousActions[0] = Input.GetAxisRaw("Horizontal");
-        continousActions[1] = Input.GetAxisRaw("Vertical");
-    }
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-        float moveX = actions.ContinuousActions[0];
-        float moveZ = actions.ContinuousActions[1];
+ 
+        int forward = actions.DiscreteActions[0];
+        int backward = actions.DiscreteActions[1];
+        int left = actions.DiscreteActions[2];
+        int right = actions.DiscreteActions[3];
+
+        int moveX = forward - backward;
+        int moveZ = left - right;
 
         transform.localPosition += new Vector3(moveX, 0, moveZ) * Time.deltaTime * moveSpeed;
     }
