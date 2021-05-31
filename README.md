@@ -11,4 +11,5 @@ To train the model run "unity-project/python/train.py" and run the unity-scene w
 The hyperparamaters in "unity-project/python/hyperparams.py" are not optimized - tuning them and the rewards specified in "unity-project/Assets/scripts/MoveToGoalAgent.cs" could improve training significantly.
 
 I am using python 3.8.8 and my Unity version is 2019.4.16f1 (if you are using a newer unity version you can update the project to a newer version - there shouldn't be any issues)
+
 Torch: 1.8.1+cu102
