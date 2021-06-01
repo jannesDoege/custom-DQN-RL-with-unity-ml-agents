@@ -1,0 +1,9 @@
+python 3.8.8
+numpy 1.19.5
+torch 1.8.1+cu102
+mlagents_envs 0.26.0
+mlagents 0.26.0
+tensorboardX 2.2
+
+unity 2019.4.16f1 (or newer)
+unity-packages: ml-agents 2.0 preview
