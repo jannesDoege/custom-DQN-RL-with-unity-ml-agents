@@ -36,8 +36,6 @@ class Agent:
         
         self.t_frame+=1
 
-        #self.t_step = (self.t_step + 1) % self.update_rate
-        #if self.t_step :
         if len(self.rep_buffer) == self.buffer_length:
             return self.learn()
         
