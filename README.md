@@ -1,4 +1,4 @@
-# custom-DDQN-RL-with-unity-ml-agents
+# custom-DQN-RL-with-unity-ml-agents
 
 The folder "unity-project" can be opened in Unity as a project. 
 
