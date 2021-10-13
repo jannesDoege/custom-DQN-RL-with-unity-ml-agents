@@ -16,8 +16,7 @@ class DQN(nn.Module):
             nn.ReLU(),
             nn.Linear(self.hidden_units_one, self.hidden_units_two),
             nn.ReLU(),
-            nn.Linear(self.hidden_units_two, self.action_space),
-            nn.ReLU()
+            nn.Linear(self.hidden_units_two, self.action_space)
         )
 
 
